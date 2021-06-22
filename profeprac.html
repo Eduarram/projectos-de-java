@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio JavaScript</title>
+	<meta charset="UTF-8">
+	  <link rel="stylesheet" type="text/css" href="estilo.formularios.css">
+<script type="text/javascript">
+window.onload = function () {  //funcion que se ejecuta cuando se carga la pagina
+/* Variables globales (por estar declaradas sin var) */
+  casillaDatos = document.getElementById('datos'); //Nodo donde vamos a mostrar los datos             
+  var elementosDelForm = document.getElementsByTagName('input'); // se obtienen los Elementos input
+  actualizarDatos();//se ejecuta por primera ves la funcion para mostrar los datos
+//se crea un ciclo for para agregar EventListenes a cada input para que el programa este atento
+  for(var i=0; i<elementosDelForm.length;i++) {
+  /*se agrega el evento change(cambio) y si se activa este evento se ejecuta la funcion actualizarDatos*/
+  elementosDelForm[i].addEventListener("change", actualizarDatos); 
+}
+
+}
+function actualizarDatos() { //funcion que permite actualizar los datos y mostrarlos en un elemto html
+casillaDatos.innerHTML='<h4> Datos introducidos: </h4><p>Nombre: '+(document.getElementById('nombre').value||' vacio ')+'</p>'+
+
+'<p>Apellidos: ' + (document.getElementById('apellidos').value||' --- ')+'</p>'+
+
+'<p>Dirección: ' + (document.getElementById('direccion1').value||' --- ')+'</p>';
+}
+</script>
+</head>
+<body>
+<h2>Ejercicio obtencion de datos y reimpresion</h2>
+
+ <div class="estiloForm">
+<form  name="formularioContacto" method="get" action="#"">
+	 
+        <label>Nombre</label><input id="nombre" name="nombre" type="text"/><br/>
+
+        <label>Apellidos</label><input id="apellidos" name="apellidos" type="text"/><br/>
+
+        <label>Dirección</label><input id="direccion1" name="direccion1" type="text"/><br/>
+        <input type="submit" value="Enviar"/> <input type="reset" value="Cancelar"/>
+   </div>
+     <div id="datos" style="float:left;"><h4> Datos introducidos: </h4></div>
+    <form name="Genero">
+        <input type="radio" name="Hombre">Hombre
+        <br>
+        <input type="radio" name="Mujer">Mujer
+        <br>
+    </form>
+</form>
+<script>
+     function alertaChecked() {
+            alert(document.miFormulario.miCheck.checked)
+        }
+        function alerValue() {
+            alert(document.miFormulario.miCheck.value)
+        }
+        function metodoClick() {
+            document.miFormulario.miCheck.click()
+        }
+</script>
+<form name="Preferencias">
+    <br>
+    <br>
+    <input type="checkbox", name="Video juegos">Videojuegos
+    <input type="checkbox" name="Deportes">Deportes
+    <input type="checkbox" name="teatro">Teatros
+    <input type="checkbox" name="Peliculas">Peliculas
+    <br>
+    <br>
+</form>
+
+</body>
+</html>

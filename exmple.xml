@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE facturas SYSTEM "facturas.dtd"> 
+<facturas>
+    <factura fecha="12/03/2011" id="f1">
+    <empresa> shneider office </empresa>
+    <linea>
+        <articulo>Goma de Borrar</articulo>
+        <cantidad>890</cantidad>
+        <precio>0,54</precio>
+    </linea>
+    <linea>
+        <articulo>Lapicero<realce>Faber Castel</realce>del uno</articulo>
+        <cantidad>10</cantidad>
+        <precio>1,20</precio>
+    </linea>

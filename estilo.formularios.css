@@ -1,0 +1,32 @@
+body {
+    margin-left:30px; 
+    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
+     width: 600px; 
+     margin: 0 auto;
+     background-color: rgb(255, 255, 255);
+     padding: 0 20px 20px 20px;
+     border: 5px solid #28c99e;
+    } 
+html{
+background-color: rgb(112, 212, 174);
+color: rgb(14, 5, 5);
+ }
+        h4 {margin:0;} 
+        div {float:left;}
+
+.estiloForm, #encuadraImagen, #datos {
+    background-color: #e7dddd; 
+    border: solid 2px black; 
+    margin-left:10px; 
+    width:400px; }
+
+.estiloForm { 
+    width: 430px; 
+    padding:10px;} 
+    #datos {margin-top: 20px; 
+        height:226px; 
+        padding:10px;}
+input{
+    padding: 10px;
+}

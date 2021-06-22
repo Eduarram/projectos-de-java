@@ -1,0 +1,19 @@
+
+    .enlace a{
+        font-family:verdana,Arial;
+        font-size:10pt;
+        text-align: center;
+        color: #2f4f4f;
+    }
+    .enlace a:visited{
+        text-decoration: none;
+        color: #00f;
+    }
+    .enlace a:active{
+        text-decoration: none;
+        color: green;
+    }
+    .enlace a:hover{
+        text-decoration: underline;
+        color: grey;
+    }

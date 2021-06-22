@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de checkbook</title>
+    <script>
+        function alertaChecked() {
+            alert(document.miFormulario.miCheck.checked)
+        }
+        function alerValue() {
+            alert(document.miFormulario.miCheck.value)
+        }
+        function metodoClick() {
+            document.miFormulario.miCheck.click()
+        }
+    </script>
+</head>
+<body>
+    <form name="miFormulario" action="mailto:promociones@guiarte.com" enctype="text/plain">
+        <input type="checkbox", name="miCheck">
+        <br>
+        <br>
+        <input type="button" value="informa de su propiedad checked" anclick="alertaChecked()">
+        <input type="button" value="informa de su propiedad value" anclick="alertaChecked()">
+        <br>
+        <br>
+        <input type="button" value="simula un click" anclick="metodoClick()">
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+	<title></title>	
+
+	<script>
+	
+function muestraMensaje() {
+  alert('Gracias por pinchar');
+}
+
+function resalta(elemento) {
+  switch(elemento.style.borderColor) {
+    case 'silver':
+    case 'silver silver silver silver':
+    case '#c0c0c0':
+      elemento.style.borderColor = 'black';
+      break;
+    case 'black':
+    case 'black black black black':
+    case '#000000':
+      elemento.style.borderColor = 'silver';
+      break;
+  }
+}
+
+	
+</script>
+	</head>
+<body>
+	
+<form action="">
+<input type="button" value="Pinchame y verás" onclick="alert('Gracias por pinchar');" />
+<br>
+<br>
+<br>
+
+<input type="button" value="Pinchame y verás" onclick="muestraMensaje()" />
+
+
+
+</form>
+<div style="width:150px; height:60px; border:thin solid black" onmouseover="resalta(this)" onmouseout="resalta(this)">
+  Sección de contenidos...
+</div>
+
+</body>
+</html>

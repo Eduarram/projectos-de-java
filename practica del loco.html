@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio DOM básico y atributos XHTML</title>
+
+<script type="text/javascript">
+
+window.onload = function() {
+  var enlaces = document.getElementsByTagName('a');
+  for(i in enlaces) {
+    enlaces[i].onclick = muestraOculta;
+  }
+}
+
+function muestraOculta() {
+  var idEnlace = this.id;
+  var trozos = idEnlace.split('_');
+  var numero = trozos[1];
+  var parrafo = document.getElementById('contenidos_' + numero);
+
+  switch(parrafo.style.display) {
+    case 'none':
+      parrafo.style.display = 'block';
+      this.innerHTML = 'Ocultar contenidos';
+      break;
+    case 'block':
+    case '':
+      parrafo.style.display = 'none';
+      this.innerHTML = 'Mostrar contenidos';
+      break;
+  }
+}
+</script>
+</head>
+
+<body>
+
+<p id="contenidos_1">[1] Manejadores de eventos<br>
+Un evento de JavaScript por sí mismo carece de utilidad. Para que los eventos resulten útiles, se deben asociar funciones o código JavaScript a cada evento. De esta forma, cuando se produce un evento se ejecuta el código indicado, por lo que la aplicación puede responder ante cualquier evento que se produzca durante su ejecución.
+
+Las funciones o código JavaScript que se definen para cada evento se denominan "manejador de eventos" y como JavaScript es un lenguaje muy flexible, existen varias formas diferentes de indicar los manejadores: <br>
+
+Manejadores como atributos de los elementos XHTML. <br>
+Manejadores como funciones JavaScript externas. <br>
+Manejadores "semánticos".</p>
+<a id="enlace_1" href="#">Ocultar contenidos</a>
+
+<br/>
+
+<p id="contenidos_2">[2] Manejadores de eventos como atributos XHTML <br>
+Se trata del método más sencillo y a la vez menos profesional de indicar el código JavaScript que se debe ejecutar cuando se produzca un evento. En este caso, el código se incluye en un atributo del propio elemento XHTML.</p>
+<a id="enlace_2" href="#">Ocultar contenidos</a>
+
+<br/>
+<p id="contenidos_3">[3] Manejadores de eventos semánticos <br>
+Los métodos que se han visto para añadir manejadores de eventos (como atributos XHTML y como funciones externas) tienen un grave inconveniente: "ensucian" el código XHTML de la página. <br>
+
+Como es conocido, una de las buenas prácticas básicas en el diseño de páginas y aplicaciones web es la separación de los contenidos (XHTML) y su aspecto o presentación (CSS). Siempre que sea posible, también se recomienda separar los contenidos (XHTML) y su comportamiento o programación (JavaScript).</p>
+<a id="enlace_3" href="#">Ocultar contenidos</a>
+
+</body>
+</html>

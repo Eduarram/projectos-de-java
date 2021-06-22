@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    function revisar_campos() {
+        var nombre=document.getElementById("nombre").value;
+        var apellido=document.getElementById("apellido").value;
+        var direccion=document.getElementById("direccion").value;
+        var telefono=document.getElementById("telefono").value;
+        var campos="debes llenar los siguientes campos:";
+        var verifica=0;
+        if (nombre=="") { verifica=1;campos=campos+"Nombre"}
+        if (apellido=="") {verifica=1;campos=campos+"Apellido"}
+        if (direccion=="") {verifica=1;campos=campos+"Direccion"}
+        if (telefono=="") {verifica=1;campos=campos+"Telefono"}
+        
+        if (verifca!=0) { alert(campos); 
+        }else{
+            alert("datos enviados")
+        }
+    }
+    </script>
+</head>
+<body>
+    <form name="datos personales" action=""></form>
+    <div><label>Digita tu Nombre</label><input type="text" id="nombre"></div>
+    <div><label>Digita tu Apellido</label><input type="text" id="apellido"></div>
+    <div><label>Digita tu Direccion</label><textarea name="direccion" id="direccion" cols="25" rows="3"></textarea></div>
+    <div><label>Digita tu Telefono</label><input type="text" id="telefono" size="10"></div>
+    <div><label>Digita tu Telefono</label><input type="submit" id="enviar" value="aceptar" onclick="revisar_campos"></div>
+</body>
+</html>
